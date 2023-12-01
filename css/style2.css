@@ -1,0 +1,287 @@
+
+/* Button style */
+.btn {
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+  text-transform: capitalize;
+  padding: 15px 40px;
+  border-radius: 0;
+  font-weight: 500;
+  border: 0;
+  position: relative;
+  z-index: 1;
+  transition: 0.2s ease;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.btn::before {
+  position: absolute;
+  content: "";
+  height: 80%;
+  width: 100%;
+  left: 0;
+  bottom: 10%;
+  z-index: -1;
+  transition: transform 0.2s ease-in-out;
+  transform-origin: top;
+  transform: scaleY(0);
+}
+.btn:active, .btn:hover, .btn.focus, .btn:focus, .btn.active {
+  outline: 0;
+  box-shadow: none !;
+}
+.btn:active::before, .btn:hover::before, .btn.focus::before, .btn:focus::before, .btn.active::before {
+  transform: scaleY(1);
+  transform-origin: bottom;
+}
+
+.btn-sm {
+  font-size: 14px;
+  padding: 10px 35px;
+}
+
+.btn-xs {
+  font-size: 12px;
+  padding: 5px 15px;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #28ABE3;
+}
+.btn-primary::before {
+  background-color: #28ABE3;
+}
+.btn-primary:active, .btn-primary:hover, .btn-primary.focus, .btn-primary:focus, .btn-primary.active {
+  color: #28ABE3 !;
+  background-color: #ffab08 !;
+  border-color: #ffab08 !;
+}
+
+.btn-outline-primary {
+  color: #28ABE3;
+  background-color: transparent;
+  border: 1px solid #28ABE3;
+}
+.btn-outline-primary::before {
+  background-color: #fff;
+}
+.btn-outline-primary:active, .btn-outline-primary:hover, .btn-outline-primary.focus, .btn-outline-primary:focus, .btn-outline-primary.active {
+  color: #28ABE3 !;
+  background-color: #28ABE3 !;
+  border-color: #28ABE3 !;
+}
+
+.btn-light {
+  color: #28ABE3;
+  background-color: #fff;
+  border: 1px solid #fff;
+}
+.btn-light::before {
+  background-color: #28ABE3;
+}
+.btn-light:active, .btn-light:hover, .btn-light.focus, .btn-light:focus, .btn-light.active {
+  color: #fff !;
+  background-color: #fff !;
+  border: 1px solid #fff !;
+}
+
+body {
+  background-color: #fff;
+  overflow-x: hidden;
+}
+
+::-moz-selection {
+  background: #ffcd6e;
+  color: #fff;
+}
+
+::selection {
+  background: #28ABE3;
+  color: #fff;
+}
+
+a:hover {
+  color: #28ABE3;
+}
+
+a.text-primary:hover {
+  color: #28ABE3 !;
+}
+
+a.text-light:hover {
+  color: #28ABE3 !;
+}
+
+h4 {
+  transition: 0.2s ease;
+}
+
+a h4:hover {
+  color: #28ABE3;
+}
+
+/* overlay */
+.overlay {
+  position: relative;
+}
+.overlay::before {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: #1a1a37;
+  opacity: 0.8;
+}
+
+.outline-0 {
+  outline: 0 !;
+}
+
+.d-unset {
+  display: unset !;
+}
+
+.bg-primary {
+  background: #28ABE3 !;
+}
+
+.bg-secondary {
+  background: #1a1a37 !;
+}
+
+.bg-gray {
+  background: #f8f8f8;
+}
+
+.text-primary {
+  color: #28ABE3 !;
+}
+
+.text-color {
+  color: #5c5c77;
+}
+
+.text-light {
+  color: #8585a4 !;
+}
+
+.text-lighten {
+  color: #d6d6e0 !;
+}
+
+.text-muted {
+  color: #b5b5b7 !;
+}
+
+.text-dark {
+  color: #1e1e4b !;
+}
+
+.font-secondary {
+  font-family: "futura-bold";
+}
+
+.mb-10 {
+  margin-bottom: 10px !;
+}
+
+.mb-20 {
+  margin-bottom: 20px !;
+}
+
+.mb-30 {
+  margin-bottom: 30px !;
+}
+
+.mb-40 {
+  margin-bottom: 40px !;
+}
+
+.mb-50 {
+  margin-bottom: 50px !;
+}
+
+.mb-60 {
+  margin-bottom: 60px !;
+}
+
+.mb-70 {
+  margin-bottom: 70px !;
+}
+
+.mb-80 {
+  margin-bottom: 80px !;
+}
+
+.mb-90 {
+  margin-bottom: 90px !;
+}
+
+.mb-100 {
+  margin-bottom: 100px !;
+}
+
+.pl-150 {
+  padding-left: 150px;
+}
+
+.zindex-1 {
+  z-index: 1;
+}
+
+@media (max-width: 991px) {
+  .overflow-md-hidden {
+    overflow: hidden;
+  }
+}
+
+.vertical-align-middle {
+  vertical-align: middle;
+}
+
+.icon-md {
+  font-size: 36px;
+}
+
+/* page title */
+.page-title-section {
+  padding: 200px 0 80px;
+}
+
+.custom-breadcrumb li.nasted {
+  position: relative;
+  padding-left: 25px;
+}
+.custom-breadcrumb li.nasted::before {
+  position: absolute;
+  font-family: "themify";
+  content: "\e649";
+  font-size: 20px;
+  top: 50%;
+  left: -5px;
+  color: #fff;
+  transform: translateY(-50%);
+}
+.sticky-header {
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.06);
+    background: #fff;
+  }
+  .sticky-header .navbar-light .navbar-nav .nav-item .nav-link {
+    color: #000;
+  }
+  .sticky-header .logo-white {
+    display: none;
+  }
+  .sticky-header .logo-default {
+    display: block;
+  }
+
+.card{
+    box-shadow: 8px 8px 8px 5px grey;
+    border: none;
+    outline: none;
+    text-align: center;
+}
